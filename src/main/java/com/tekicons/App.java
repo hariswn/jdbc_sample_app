@@ -12,7 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("MySQL JDBC Connection Testing ~");
+        System.out.println("MySQL JDBC Connection Testing !!!");
 
         List<Employee> result = new ArrayList<>();
 
