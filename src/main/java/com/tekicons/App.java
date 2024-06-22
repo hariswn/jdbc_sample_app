@@ -19,7 +19,7 @@ public class App
         String SQL_SELECT = "Select * from employee";
 
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/mydb", "root", "Harry@12345");
+                "jdbc:mysql://localhost:3306/mydb", "root", "root");
              PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT)) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -30,7 +30,7 @@ public class App
                 String name = resultSet.getString("emp_name");
                 String address = resultSet.getString("emp_address");
                 long salary = resultSet.getLong("salary");
-
+                System.out.println("employee details");
                 Employee obj = new Employee();
                 obj.setId(id);
                 obj.setName(name);
